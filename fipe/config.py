@@ -1,0 +1,33 @@
+from pathlib import Path
+
+#LEMBRAR SEMPRE DE ALTERAR O CAMINHO ABAIXO PARA O CAMINHO DA PLANILHA DESEJADA
+CAMINHO_PLANILHA = Path(r"C:\Users\GTM\Downloads\Atualiza-Fipe\Planilha Veículos c- depreciação.xlsx")
+CAMINHO_PENDENCIAS = Path(r"C:\Users\GTM\Downloads\Atualiza-Fipe\pendencias_fipe.csv")
+ABA_VEICULOS = "VEICULOS"
+LINHA_CABECALHO = 2
+LINHA_INICIO_DADOS = 3
+API_BASE = "https://fipe.parallelum.com.br/api/v2"
+TIMEOUT_SEGUNDOS = 30
+TENTATIVAS_API = 3
+
+COLUNAS_CONTROLE = [
+    "MODELO CODE FIPE",
+    "CÓDIGO FIPE",
+    "ANO FIPE",
+    "MODELO FIPE",
+    "STATUS FIPE",
+    "MOTIVO FIPE",
+    "REFERÊNCIA FIPE",
+    "CANDIDATOS FIPE",
+]
+
+ALIASES_MARCA = {
+    "VW": "VOLKSWAGEN",
+    "VW VOLKSWAGEN": "VOLKSWAGEN",
+}
+
+PALAVRAS_NEUTRAS = {
+    "A", "BASCULANTE", "CABINE", "CAMINHAO", "CARGA", "COM",
+    "COMPLEMENTAR", "DE", "E", "IMPLEMENTO", "LITROS", "METROS",
+    "MUNCK", "PARA", "PIPA", "TUDO", "VEICULO", "VOLKSWAGEN", "VW",
+}
